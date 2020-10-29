@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
+import Planets from './components/Planets/Planets';
+import Planet from './components/Planet/Planet';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>First iteration - init project</p>
-      </header>
+      <Switch>
+        <Route path="/" exact component={Planets} />
+        <Route path="/planet" component={Planet} />
+        <Redirect to="/" />
+      </Switch>
     </div>
   );
 }
