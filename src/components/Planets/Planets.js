@@ -26,21 +26,11 @@ export default function Planets() {
     <div>
       <h1>Planets</h1>
       <ul className={styles.card}>
-        {state.length > 0 &&
-          state.map(
-            item => (
-              //  {
-              <Planet item={item} />
-            ),
-            // return (
-            //   <li key={item.name}>
-            //     <p>name: {item.name}</p>
-            //     <p>climate: {item.climate}</p>
-            //     <p>population: {item.population}</p>
-            //   </li>
-            // );
-            // }
-          )}
+        {state.length > 0 ? (
+          state.map((item, idx) => <Planet item={item} idx={idx} key={idx} />)
+        ) : (
+          <div>Loading...</div>
+        )}
       </ul>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styles from './PlanetItem.module.css';
 
-export default function Planet({ item }) {
+export default function Planet({ item, idx }) {
   const history = useHistory();
   const itemClickHandler = e => {
     // if (e.target.nodeName !== 'LI') return;
@@ -24,9 +24,9 @@ export default function Planet({ item }) {
     console.log('id = ', id);
     // -=-=-=-=-= TEMP! =-=-=-=-=-
     // history.replace('/planet');
-    history.push('/planet');
+    history.push(`/planet/${id}`);
   };
-
+  console.log('PlanetItem idx = ', idx);
   return (
     <li
       key={item.name}
