@@ -2,6 +2,7 @@ import { swSlice } from './swReduser';
 import axios from 'axios';
 
 const pathSWAPI = 'https://swapi.dev/api/planets/?page=';
+const correctHttp = str => str.replace('http://', 'https://');
 
 const getPlanets = () => async (dispatch, getState) => {
   dispatch(swSlice.actions.setIsLoading());
@@ -21,7 +22,7 @@ const previousPage = () => async (dispatch, getState) => {
   dispatch(swSlice.actions.setIsLoading());
   const { previous, current } = getState().planets;
   try {
-    const planetsArray = await axios.get(previous);
+    const planetsArray = await axios.get(correctHttp(previous));
     const result = { ...planetsArray.data, current: current - 1 };
     dispatch(swSlice.actions.getPlanets(result));
   } catch (err) {
@@ -34,7 +35,7 @@ const nextPage = () => async (dispatch, getState) => {
   dispatch(swSlice.actions.setIsLoading());
   const { next, current } = getState().planets;
   try {
-    const planetsArray = await axios.get(next);
+    const planetsArray = await axios.get(correctHttp(next));
     const result = { ...planetsArray.data, current: current + 1 };
     dispatch(swSlice.actions.getPlanets(result));
   } catch (err) {
@@ -47,7 +48,7 @@ const getResidents = data => async (dispatch, getState) => {
   dispatch(swSlice.actions.setIsLoading());
   try {
     const result = await data.map(async item => {
-      const resident = await axios.get(item);
+      const resident = await axios.get(correctHttp(item));
       return resident.data.name;
     });
     const res = await Promise.all(result);
