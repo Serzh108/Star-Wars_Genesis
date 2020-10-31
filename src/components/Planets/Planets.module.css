@@ -1,9 +1,28 @@
 .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* width: 80%; */
+  /* margin: 0 auto; */
+  margin-bottom: 16px;
   list-style: none;
   border: 1px solid #cfc;
   padding: 10px;
 }
 
 .btn {
+  display: inline-block;
   margin: 0 6px 16px;
+  padding: 4px 12px;
+  font-size: 24px;
+  color: #335;
+  outline: none;
+  border: 1px solid #557;
+  border-radius: 12px;
+}
+
+button {
+  cursor: pointer;
 }

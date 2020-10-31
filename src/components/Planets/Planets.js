@@ -39,7 +39,7 @@ export default function Planets() {
 
   return (
     <div>
-      <h1>Planets</h1>
+      <h1>Планеты</h1>
       {isLoading && (
         <div
           style={{
@@ -70,18 +70,20 @@ export default function Planets() {
         type="button"
         className={styles.btn}
         disabled={previousPlanets ? false : true}
+        style={{ color: previousPlanets ? '#335' : 'red' }}
         onClick={btnLeftClickHandler}
       >
         {previousPlanets ? 'Назад' : 'Всё, это начало'}
       </button>
-      <button type="button" className={styles.btn}>
+      <span className={styles.btn}>
         {currentPlanets}
         {/* {currentPage() + ' - ' + currentPlanets} */}
-      </button>
+      </span>
       <button
         type="button"
         className={styles.btn}
         disabled={nextPlanets ? false : true}
+        style={{ color: nextPlanets ? '#335' : 'red' }}
         onClick={btnRightClickHandler}
       >
         {nextPlanets ? 'Вперед' : 'Всё, больше нет'}

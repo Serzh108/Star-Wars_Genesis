@@ -40,14 +40,35 @@ export default function Planet({ match }) {
 
   return (
     <div className={styles.container}>
-      <h2>Description of planet</h2>
-      <p>Имя: {name}</p>
-      <p>Период оборота: {rotation_period}</p>
-      <p>Диаметр: {diameter}</p>
-      <p>Климат: {climate}</p>
-      <p>Гравитация: {gravity}</p>
-      <p>Тип местности: {terrain}</p>
-      <p>Население: {population}</p>
+      <h2 className={styles.main_title}>Описание планеты</h2>
+      <p className={styles.title_name}>
+        <span className={styles.title}>Имя:</span>
+        {name}
+      </p>
+      <p>
+        <span className={styles.title}>Период оборота:</span>
+        {rotation_period}
+      </p>
+      <p>
+        <span className={styles.title}>Диаметр:</span>
+        {diameter}
+      </p>
+      <p>
+        <span className={styles.title}>Климат:</span>
+        {climate}
+      </p>
+      <p>
+        <span className={styles.title}>Гравитация:</span>
+        {gravity}
+      </p>
+      <p>
+        <span className={styles.title}>Тип местности:</span>
+        {terrain}
+      </p>
+      <p>
+        <span className={styles.title}>Население:</span>
+        {population}
+      </p>
       <h3>Известные жители:</h3>
       {isLoading && (
         <div
@@ -68,7 +89,11 @@ export default function Planet({ match }) {
       )}
       <ul>
         {residentsNameList.length > 0 ? (
-          residentsNameList.map(item => <li key={item}>{item}</li>)
+          residentsNameList.map(item => (
+            <li className={styles.item} key={item}>
+              {item}
+            </li>
+          ))
         ) : (
           <li key="Нет данных">Нет данных</li>
         )}

@@ -1,13 +1,31 @@
 .container {
   width: 600px;
   height: auto;
-  color: blue;
-  background-color: #eee;
-  border: 1px solid red;
+  color: #335;
+  background-color: #e7e7f7;
+  border: 1px solid #ccf;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.main_title {
+  text-transform: uppercase;
 }
 
 .container p {
   padding: 6px 0;
+}
+
+.title_name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.title {
+  padding: 8px;
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .container h3 {
@@ -21,13 +39,20 @@
   list-style: none;
 }
 
+.item {
+  padding-bottom: 8px;
+  font-style: italic;
+}
+
 .link {
   display: block;
   width: 50%;
-  margin: 6px auto;
+  margin: 12px auto 18px;
   padding: 4px;
+  color: #335;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: #e1e1f1;
   border: 1px solid #aaa;
   border-radius: 8px;
 }

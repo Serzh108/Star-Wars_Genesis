@@ -1,6 +1,23 @@
 .item {
-  margin-bottom: 10px;
-  font-size: 16px;
+  width: 45%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 18px;
   border: 1px solid #ccf;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+.title_name {
+  display: block;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.title {
+  padding: 8px;
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
 }

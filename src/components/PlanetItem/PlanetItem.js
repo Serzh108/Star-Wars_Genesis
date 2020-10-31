@@ -26,9 +26,18 @@ export default function Planet({ item, idx }) {
       className={styles.item}
       onClick={itemClickHandler}
     >
-      <span> название: {item.name} </span>
-      <span> климат: {item.climate} </span>
-      <span> население: {item.population} </span>
+      <span className={styles.title_name}>
+        {' '}
+        <span className={styles.title}>название:</span> {item.name}{' '}
+      </span>
+      <span>
+        {' '}
+        <span className={styles.title}>климат:</span> {item.climate}{' '}
+      </span>
+      <span>
+        {' '}
+        <span className={styles.title}>население:</span> {item.population}{' '}
+      </span>
     </li>
   );
 }
