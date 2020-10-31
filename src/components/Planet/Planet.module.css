@@ -1,7 +1,33 @@
 .container {
-  width: 400px;
-  height: 300px;
+  width: 600px;
+  height: auto;
   color: blue;
   background-color: #eee;
   border: 1px solid red;
+}
+
+.container p {
+  padding: 6px 0;
+}
+
+.container h3 {
+  padding: 6px 0 4px;
+  margin: 0;
+}
+
+.container ul {
+  margin: 0 0 6px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: block;
+  width: 50%;
+  margin: 6px auto;
+  padding: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #aaa;
+  border-radius: 8px;
 }
