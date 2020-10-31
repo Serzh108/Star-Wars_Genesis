@@ -6,7 +6,7 @@
   text-align: center;
   background-color: #eef;
   /* background-image: url(./assets/images/Star-wars-logo.jpg); */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   min-height: 100vh;
   font-size: calc(10px + 1vmin);
   color: #333;
