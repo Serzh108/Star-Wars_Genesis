@@ -1,0 +1,23 @@
+@import './fonts.css';
+@import './vars.css';
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}

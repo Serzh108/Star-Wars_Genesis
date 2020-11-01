@@ -3,8 +3,8 @@
   padding: 8px;
   margin-bottom: 16px;
   font-size: 18px;
-  border: 1px solid #ccf;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--first-border-color);
+  box-shadow: 0 10px 20px var(--box-shadow-color);
   cursor: pointer;
 }
 
@@ -19,5 +19,4 @@
   padding-left: 16px;
   font-size: 18px;
   font-weight: 700;
-  text-decoration: underline;
 }

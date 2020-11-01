@@ -1,0 +1,16 @@
+:root {
+  /* fonts */
+  --main-font: 'Roboto', sans-serif;
+  --main-font-size: calc(10px + 1vmin);
+
+  /*colors*/
+  /* --main-text-color: #335; */
+  --main-text-color: #fce80d;
+  /* --main-background-color: #e7e7f7; */
+  --main-background-color: transparent;
+  /* --second-background-color: #e1e1f1; */
+  --second-background-color: transparent;
+  --first-border-color: #ccc;
+  /* --box-shadow-color: rgba(0, 0, 0, 0.25); */
+  --box-shadow-color: rgba(255, 255, 255, 0.25);
+}

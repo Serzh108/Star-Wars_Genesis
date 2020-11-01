@@ -1,26 +1,37 @@
+.logo {
+  width: 180px;
+  height: 78px;
+  padding-top: 6px;
+  background-image: url(../../assets/images/logo.jpg);
+  background-repeat: no-repeat;
+}
+
+.title {
+  text-shadow: 6px 6px 12px red;
+}
+
 .card {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  /* width: 80%; */
-  /* margin: 0 auto; */
   margin-bottom: 16px;
   list-style: none;
-  border: 1px solid #cfc;
   padding: 10px;
 }
 
 .btn {
   display: inline-block;
   margin: 0 6px 16px;
-  padding: 4px 12px;
-  font-size: 24px;
-  color: #335;
+  padding: 6px 12px;
+  font-size: 22px;
+  color: var(--main-text-color);
   outline: none;
-  border: 1px solid #557;
+  border: 1px solid var(--first-border-color);
   border-radius: 12px;
+  background-color: var(--main-background-color);
+  box-shadow: 2px 8px 16px var(--box-shadow-color);
 }
 
 button {

@@ -14,8 +14,6 @@ export default function Planet({ item, idx }) {
       if (!e.target.id) return;
       id = e.target.id;
     }
-    // const id = Number(e.target.id);
-    // console.log('id = ', id);
     history.push(`/planet/${id}`);
   };
 
@@ -27,16 +25,13 @@ export default function Planet({ item, idx }) {
       onClick={itemClickHandler}
     >
       <span className={styles.title_name}>
-        {' '}
-        <span className={styles.title}>название:</span> {item.name}{' '}
+        <span className={styles.title}>название:</span> {item.name}
       </span>
       <span>
-        {' '}
-        <span className={styles.title}>климат:</span> {item.climate}{' '}
+        <span className={styles.title}>климат:</span> {item.climate}
       </span>
       <span>
-        {' '}
-        <span className={styles.title}>население:</span> {item.population}{' '}
+        <span className={styles.title}>население:</span> {item.population}
       </span>
     </li>
   );

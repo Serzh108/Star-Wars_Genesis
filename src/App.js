@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import './App.css';
+import './styles/App.css';
 import Planets from './components/Planets/Planets';
 import Planet from './components/Planet/Planet';
 

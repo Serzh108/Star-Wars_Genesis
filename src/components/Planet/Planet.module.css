@@ -1,10 +1,10 @@
 .container {
   width: 600px;
   height: auto;
-  color: #335;
-  background-color: #e7e7f7;
-  border: 1px solid #ccf;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  color: var(--main-text-color);
+  background-color: var(--main-background-color);
+  border: 1px solid var(--first-border-color);
+  box-shadow: 0 10px 20px var(--box-shadow-color);
 }
 
 .main_title {
@@ -25,7 +25,6 @@
   padding-left: 16px;
   font-size: 18px;
   font-weight: 700;
-  text-decoration: underline;
 }
 
 .container h3 {
@@ -49,10 +48,10 @@
   width: 50%;
   margin: 12px auto 18px;
   padding: 4px;
-  color: #335;
+  color: var(--main-text-color);
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #e1e1f1;
-  border: 1px solid #aaa;
+  background-color: var(--second-background-color);
+  border: 1px solid var(--first-border-color);
   border-radius: 8px;
 }
