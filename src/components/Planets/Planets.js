@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPlanets, nextPage, previousPage } from '../../redux/swOperations';
 import Planet from '../PlanetItem/PlanetItem';
+import Button from '../Button/Button';
 import CircleLoader from 'react-spinners/CircleLoader';
 import { css } from '@emotion/core';
 import styles from './Planets.module.css';
@@ -17,7 +18,6 @@ export default function Planets() {
   const nextPlanets = useSelector(state => state.planets.next);
   const currentPlanets = useSelector(state => state.planets.current);
   const isLoading = useSelector(state => state.planets.isLoading);
-  // console.log('planetsList = ', planetsList);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -31,11 +31,6 @@ export default function Planets() {
   const btnRightClickHandler = () => {
     nextPlanets && dispatch(nextPage());
   };
-
-  // const currentPage = () => {
-  //   const previous = previousPlanets ? previousPlanets.slice(-1) : 0;
-  //   return Number(previous) + 1;
-  // };
 
   return (
     <>
@@ -68,25 +63,19 @@ export default function Planets() {
             <li>No infirmation...</li>
           )}
         </ul>
-        <button
-          type="button"
-          className={styles.btn}
-          disabled={previousPlanets ? false : true}
-          style={{ color: previousPlanets ? '#fce80d' : 'red' }}
-          onClick={btnLeftClickHandler}
-        >
-          {previousPlanets ? '<< Назад' : 'Всё, это начало'}
-        </button>
+        <Button
+          direction={previousPlanets}
+          clickHandler={btnLeftClickHandler}
+          text1="<< Назад"
+          text2="Всё, это начало"
+        />
         <span className={styles.btn}>{currentPlanets}</span>
-        <button
-          type="button"
-          className={styles.btn}
-          disabled={nextPlanets ? false : true}
-          style={{ color: nextPlanets ? '#fce80d' : 'red' }}
-          onClick={btnRightClickHandler}
-        >
-          {nextPlanets ? 'Вперед >>' : 'Всё, больше нет'}
-        </button>
+        <Button
+          direction={nextPlanets}
+          clickHandler={btnRightClickHandler}
+          text1="Вперед >>"
+          text2="Всё, больше нет"
+        />
       </div>
     </>
   );

@@ -20,13 +20,6 @@ export const swSlice = createSlice({
       previous: payload.previous,
       next: payload.next,
     }),
-    // addPlanets: (state, { payload }) => ({
-    //   ...state,
-    //   items: [...payload.results],
-    //   current: payload.current,
-    //   previous: payload.previous,
-    //   next: payload.next,
-    // }),
     getResidents: (state, { payload }) => ({
       ...state,
       residentsName: [...state.residentsName, ...payload],
@@ -45,4 +38,3 @@ export const swSlice = createSlice({
     }),
   },
 });
-// console.log('payload: ', payload);

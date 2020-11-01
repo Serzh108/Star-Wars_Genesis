@@ -24,16 +24,11 @@
 .btn {
   display: inline-block;
   margin: 0 6px 16px;
-  padding: 6px 12px;
+  padding: 6px 16px;
   font-size: 22px;
   color: var(--main-text-color);
-  outline: none;
   border: 1px solid var(--first-border-color);
   border-radius: 12px;
   background-color: var(--main-background-color);
   box-shadow: 2px 8px 16px var(--box-shadow-color);
-}
-
-button {
-  cursor: pointer;
 }
