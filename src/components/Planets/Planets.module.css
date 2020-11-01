@@ -1,7 +1,7 @@
 .logo {
   width: 180px;
   height: 78px;
-  padding-top: 6px;
+  margin-top: 6px;
   background-image: url(../../assets/images/logo.jpg);
   background-repeat: no-repeat;
 }

@@ -27,12 +27,14 @@ export default function Planet({ item, idx }) {
       <span className={styles.title_name}>
         <span className={styles.title}>название:</span> {item.name}
       </span>
-      <span>
-        <span className={styles.title}>климат:</span> {item.climate}
-      </span>
-      <span>
-        <span className={styles.title}>население:</span> {item.population}
-      </span>
+      <div>
+        <span>
+          <span className={styles.title}>климат:</span> {item.climate}
+        </span>
+        <span>
+          <span className={styles.title}>население:</span> {item.population}
+        </span>
+      </div>
     </li>
   );
 }
