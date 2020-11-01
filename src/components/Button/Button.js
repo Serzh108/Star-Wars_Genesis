@@ -7,7 +7,7 @@ export default function Button({ direction, clickHandler, text1, text2 }) {
       type="button"
       className={styles.btn}
       disabled={direction ? false : true}
-      style={{ color: direction ? '#fce80d' : 'red' }}
+      style={{ color: direction ? '#fce80d' : ' #ff6c00' }}
       onClick={clickHandler}
     >
       {direction ? text1 : text2}
